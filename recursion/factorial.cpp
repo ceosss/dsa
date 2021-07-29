@@ -11,7 +11,7 @@ int factorial(int n)
 
 int main()
 {
-    cout << "factorial";
+    cout << "factorial" << endl;
 
     int n;
     cout << "n <- ";

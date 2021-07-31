@@ -1,5 +1,5 @@
 #include <iostream>
-#include "linked_list_adt.h"
+#include "linked_list.h"
 using namespace std;
 
 void Node::generateLinkedList(int *a, int n)

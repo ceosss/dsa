@@ -1,5 +1,5 @@
 #include <iostream>
-#include "linked_list_adt.h"
+#include "linked_list.h"
 
 void Node::insert(int n)
 {

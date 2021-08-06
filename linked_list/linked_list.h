@@ -3,13 +3,13 @@ using namespace std;
 
 class Node
 {
-private:
+public:
     int data;
     struct Node *next;
 
-public:
     void insert(int n);
     void display();
+    void recursiveDisplay(Node *);
     int deleteItem();
     void generateLinkedList(int *, int);
 };
@@ -91,5 +91,14 @@ int Node::deleteItem()
         deleted = toDelete->data;
         delete toDelete;
         return deleted;
+    }
+}
+
+void Node::recursiveDisplay(Node *itr)
+{
+    if (itr)
+    {
+        cout << itr->data << " ";
+        recursiveDisplay(itr->next);
     }
 }

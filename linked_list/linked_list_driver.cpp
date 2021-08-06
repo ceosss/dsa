@@ -14,6 +14,7 @@ int main()
         cout << "2. display" << endl;
         cout << "3. delete " << endl;
         cout << "4. generate a linked list" << endl;
+        cout << "5. Recursive display" << endl;
         cout << "-1. exit" << endl;
         int choice;
         cin >> choice;
@@ -44,6 +45,11 @@ int main()
             int n = 5;
             int a[5] = {1, 2, 3, 4, 5};
             driver->generateLinkedList(a, n);
+            break;
+        }
+        case 5:
+        {
+            driver->recursiveDisplay(head);
             break;
         }
         case -1:

@@ -23,6 +23,7 @@ int main()
         cout << "11. Search" << endl;
         cout << "12. Recursive Search" << endl;
         cout << "13. Insert at position" << endl;
+        cout << "14. Delete at position" << endl;
         cout << "-1. exit" << endl;
         int choice;
         cin >> choice;
@@ -122,6 +123,15 @@ int main()
             cout << "x <- ";
             cin >> x;
             driver->insertAtPosition(x, pos);
+            break;
+        }
+        case 14:
+        {
+            cout << "pos <- ";
+            int pos;
+            cin >> pos;
+            int deleted = driver->deleteAtPosition(pos);
+            cout << "Deleted " << deleted << " from position " << pos << endl;
             break;
         }
         case -1:

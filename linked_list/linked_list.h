@@ -20,6 +20,7 @@ public:
     int searchElement(int);
     bool recursiveSearch(Node *, int);
     void insertAtPosition(int, int);
+    int deleteAtPosition(int);
 };
 Node *head;
 
@@ -209,4 +210,36 @@ void Node::insertAtPosition(int n, int pos)
             newnode->next = NULL;
         }
     }
+}
+
+int Node::deleteAtPosition(int pos)
+{
+    // pos 0  1  2  3  4
+    // ele 0  1  2  3  4
+    Node *toDelete;
+    Node *itr = head;
+    int deleteData;
+    if (pos == 0)
+    {
+        toDelete = head;
+        head = head->next;
+    }
+    else
+    {
+        for (int i = 0; i < pos - 1; i++)
+            itr = itr->next;
+        if (itr->next->next)
+        {
+            toDelete = itr->next;
+            itr->next = itr->next->next;
+        }
+        else
+        {
+            toDelete = itr->next;
+            itr->next = NULL;
+        }
+    }
+    deleteData = toDelete->data;
+    delete toDelete;
+    return deleteData;
 }

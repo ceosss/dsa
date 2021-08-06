@@ -7,7 +7,7 @@ int main()
     cout << "---------------" << endl;
     cout << "Linked list adt" << endl;
     cout << "---------------" << endl;
-    struct Node *driver = new Node;
+    Node *driver = new Node;
     while (true)
     {
         cout << "1. insert" << endl;

@@ -24,6 +24,7 @@ int main()
         cout << "12. Recursive Search" << endl;
         cout << "13. Insert at position" << endl;
         cout << "14. Delete at position" << endl;
+        cout << "15. Check if sorted" << endl;
         cout << "-1. exit" << endl;
         int choice;
         cin >> choice;
@@ -132,6 +133,15 @@ int main()
             cin >> pos;
             int deleted = driver->deleteAtPosition(pos);
             cout << "Deleted " << deleted << " from position " << pos << endl;
+            break;
+        }
+        case 15:
+        {
+            int sorted = driver->isSorted();
+            if (sorted)
+                cout << "Sorted" << endl;
+            else
+                cout << "Not sorted" << endl;
             break;
         }
         case -1:

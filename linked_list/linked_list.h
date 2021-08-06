@@ -21,6 +21,7 @@ public:
     bool recursiveSearch(Node *, int);
     void insertAtPosition(int, int);
     int deleteAtPosition(int);
+    bool isSorted();
 };
 Node *head;
 
@@ -242,4 +243,19 @@ int Node::deleteAtPosition(int pos)
     deleteData = toDelete->data;
     delete toDelete;
     return deleteData;
+}
+
+bool Node::isSorted()
+{
+    Node *itr = head;
+    int last = itr->data;
+    itr = itr->next;
+    while (itr)
+    {
+        if (itr->data < last)
+            return false;
+        last = itr->data;
+        itr = itr->next;
+    }
+    return true;
 }

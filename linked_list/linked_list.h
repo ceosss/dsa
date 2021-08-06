@@ -15,6 +15,7 @@ public:
     int countNodes();
     int countNodesRecursively(Node *);
     int sumOfElements();
+    int sumOfElementsRecursively(Node *);
 };
 Node *head;
 
@@ -136,4 +137,12 @@ int Node::sumOfElements()
         itr = itr->next;
     }
     return sum;
+}
+
+int Node::sumOfElementsRecursively(Node *itr)
+{
+    if (itr)
+        return sumOfElementsRecursively(itr->next) + itr->data;
+    else
+        return 0;
 }

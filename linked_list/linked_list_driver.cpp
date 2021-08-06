@@ -18,6 +18,7 @@ int main()
         cout << "6. Count nodes" << endl;
         cout << "7. Count nodes recursively" << endl;
         cout << "8. Sum of elements" << endl;
+        cout << "9. Sum of elements recursively" << endl;
         cout << "-1. exit" << endl;
         int choice;
         cin >> choice;
@@ -70,6 +71,12 @@ int main()
         case 8:
         {
             int sum = driver->sumOfElements();
+            cout << "Sum: " << sum << endl;
+            break;
+        }
+        case 9:
+        {
+            int sum = driver->sumOfElementsRecursively(head);
             cout << "Sum: " << sum << endl;
             break;
         }

@@ -17,6 +17,7 @@ public:
     int sumOfElements();
     int sumOfElementsRecursively(Node *);
     int maxElement();
+    int searchElement(int);
 };
 Node *head;
 
@@ -158,4 +159,14 @@ int Node::maxElement()
         itr = itr->next;
     }
     return max;
+}
+int Node::searchElement(int n)
+{
+    Node *itr = head;
+    for (int i = 0; itr != NULL; i++, itr = itr->next)
+    {
+        if (itr->data == n)
+            return i;
+    }
+    return -1;
 }

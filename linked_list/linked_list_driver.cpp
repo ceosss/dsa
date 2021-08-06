@@ -20,6 +20,7 @@ int main()
         cout << "8. Sum of elements" << endl;
         cout << "9. Sum of elements recursively" << endl;
         cout << "10. Max element" << endl;
+        cout << "11. Search" << endl;
         cout << "-1. exit" << endl;
         int choice;
         cin >> choice;
@@ -85,6 +86,18 @@ int main()
         {
             int max = driver->maxElement();
             cout << "Max: " << max << endl;
+            break;
+        }
+        case 11:
+        {
+            cout << "x <- ";
+            int x;
+            cin >> x;
+            int found = driver->searchElement(x);
+            if (found != -1)
+                cout << "Found " << x << " at " << found << endl;
+            else
+                cout << x << " not found" << endl;
             break;
         }
         case -1:

@@ -22,6 +22,7 @@ int main()
         cout << "10. Max element" << endl;
         cout << "11. Search" << endl;
         cout << "12. Recursive Search" << endl;
+        cout << "13. Insert at position" << endl;
         cout << "-1. exit" << endl;
         int choice;
         cin >> choice;
@@ -111,6 +112,16 @@ int main()
                 cout << "Found " << x << endl;
             else
                 cout << x << " not found" << endl;
+            break;
+        }
+        case 13:
+        {
+            int pos, x;
+            cout << "pos <- ";
+            cin >> pos;
+            cout << "x <- ";
+            cin >> x;
+            driver->insertAtPosition(x, pos);
             break;
         }
         case -1:

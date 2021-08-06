@@ -19,6 +19,7 @@ public:
     int maxElement();
     int searchElement(int);
     bool recursiveSearch(Node *, int);
+    void insertAtPosition(int, int);
 };
 Node *head;
 
@@ -179,4 +180,33 @@ bool Node::recursiveSearch(Node *itr, int x)
     if (itr->data == x)
         return true;
     return recursiveSearch(itr->next, x);
+}
+
+void Node::insertAtPosition(int n, int pos)
+{
+    // pos - 0  1  2  3  4  5  6
+    // ele -  1  2  3  4  5  6
+    Node *newnode = new Node();
+    newnode->data = n;
+    if (pos == 0)
+    {
+        newnode->next = head;
+        head = newnode;
+    }
+    else
+    {
+        Node *itr = head;
+        for (int i = 0; i < pos - 1; i++)
+            itr = itr->next;
+        if (itr->next)
+        {
+            newnode->next = itr->next;
+            itr->next = newnode;
+        }
+        else
+        {
+            itr->next = newnode;
+            newnode->next = NULL;
+        }
+    }
 }

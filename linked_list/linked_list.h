@@ -13,6 +13,7 @@ public:
     int deleteItem();
     void generateLinkedList(int *, int);
     int countNodes();
+    int countNodesRecursively(Node *);
 };
 Node *head;
 
@@ -114,4 +115,12 @@ int Node::countNodes()
         itr = itr->next;
     }
     return count;
+}
+
+int Node::countNodesRecursively(Node *itr)
+{
+    if (itr)
+        return countNodesRecursively(itr->next) + 1;
+    else
+        return 0;
 }

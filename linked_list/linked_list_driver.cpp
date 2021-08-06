@@ -19,6 +19,7 @@ int main()
         cout << "7. Count nodes recursively" << endl;
         cout << "8. Sum of elements" << endl;
         cout << "9. Sum of elements recursively" << endl;
+        cout << "10. Max element" << endl;
         cout << "-1. exit" << endl;
         int choice;
         cin >> choice;
@@ -78,6 +79,12 @@ int main()
         {
             int sum = driver->sumOfElementsRecursively(head);
             cout << "Sum: " << sum << endl;
+            break;
+        }
+        case 10:
+        {
+            int max = driver->maxElement();
+            cout << "Max: " << max << endl;
             break;
         }
         case -1:

@@ -16,6 +16,7 @@ public:
     int countNodesRecursively(Node *);
     int sumOfElements();
     int sumOfElementsRecursively(Node *);
+    int maxElement();
 };
 Node *head;
 
@@ -145,4 +146,16 @@ int Node::sumOfElementsRecursively(Node *itr)
         return sumOfElementsRecursively(itr->next) + itr->data;
     else
         return 0;
+}
+int Node::maxElement()
+{
+    int max = INT_MIN;
+    Node *itr = head;
+    while (itr)
+    {
+        if (itr->data > max)
+            max = itr->data;
+        itr = itr->next;
+    }
+    return max;
 }

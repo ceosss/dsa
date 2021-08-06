@@ -14,6 +14,7 @@ public:
     void generateLinkedList(int *, int);
     int countNodes();
     int countNodesRecursively(Node *);
+    int sumOfElements();
 };
 Node *head;
 
@@ -123,4 +124,16 @@ int Node::countNodesRecursively(Node *itr)
         return countNodesRecursively(itr->next) + 1;
     else
         return 0;
+}
+
+int Node::sumOfElements()
+{
+    int sum = 0;
+    Node *itr = head;
+    while (itr)
+    {
+        sum += itr->data;
+        itr = itr->next;
+    }
+    return sum;
 }

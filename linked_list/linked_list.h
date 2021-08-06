@@ -18,6 +18,7 @@ public:
     int sumOfElementsRecursively(Node *);
     int maxElement();
     int searchElement(int);
+    bool recursiveSearch(Node *, int);
 };
 Node *head;
 
@@ -169,4 +170,13 @@ int Node::searchElement(int n)
             return i;
     }
     return -1;
+}
+
+bool Node::recursiveSearch(Node *itr, int x)
+{
+    if (!itr)
+        return false;
+    if (itr->data == x)
+        return true;
+    return recursiveSearch(itr->next, x);
 }

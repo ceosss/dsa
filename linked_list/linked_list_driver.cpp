@@ -21,6 +21,7 @@ int main()
         cout << "9. Sum of elements recursively" << endl;
         cout << "10. Max element" << endl;
         cout << "11. Search" << endl;
+        cout << "12. Recursive Search" << endl;
         cout << "-1. exit" << endl;
         int choice;
         cin >> choice;
@@ -96,6 +97,18 @@ int main()
             int found = driver->searchElement(x);
             if (found != -1)
                 cout << "Found " << x << " at " << found << endl;
+            else
+                cout << x << " not found" << endl;
+            break;
+        }
+        case 12:
+        {
+            cout << "x <- ";
+            int x;
+            cin >> x;
+            bool found = driver->recursiveSearch(head, x);
+            if (found)
+                cout << "Found " << x << endl;
             else
                 cout << x << " not found" << endl;
             break;

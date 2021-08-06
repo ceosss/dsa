@@ -12,6 +12,7 @@ public:
     void recursiveDisplay(Node *);
     int deleteItem();
     void generateLinkedList(int *, int);
+    int countNodes();
 };
 Node *head;
 
@@ -101,4 +102,16 @@ void Node::recursiveDisplay(Node *itr)
         cout << itr->data << " ";
         recursiveDisplay(itr->next);
     }
+}
+
+int Node::countNodes()
+{
+    Node *itr = head;
+    int count = 0;
+    while (itr)
+    {
+        count++;
+        itr = itr->next;
+    }
+    return count;
 }

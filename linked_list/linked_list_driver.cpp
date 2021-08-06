@@ -15,6 +15,7 @@ int main()
         cout << "3. delete " << endl;
         cout << "4. generate a linked list" << endl;
         cout << "5. Recursive display" << endl;
+        cout << " 6. Count nodes" << endl;
         cout << "-1. exit" << endl;
         int choice;
         cin >> choice;
@@ -50,6 +51,12 @@ int main()
         case 5:
         {
             driver->recursiveDisplay(head);
+            break;
+        }
+        case 6:
+        {
+            int nodes = driver->countNodes();
+            cout << nodes << " nodes" << endl;
             break;
         }
         case -1:

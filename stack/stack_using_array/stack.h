@@ -15,6 +15,7 @@ public:
     void display();
     int pop();
     int peek(int);
+    int stackTop();
 };
 
 void Stack::insert(int n)
@@ -69,5 +70,18 @@ int Stack::peek(int n)
     {
         //1 2 3 4 5 , n=4
         return a[top - n];
+    }
+}
+
+int Stack::stackTop()
+{
+    if (top == -1)
+    {
+        cout << "Empty stack" << endl;
+        return -1;
+    }
+    else
+    {
+        return a[top];
     }
 }

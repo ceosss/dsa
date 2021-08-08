@@ -14,6 +14,7 @@ int main()
         cout << "2. Display" << endl;
         cout << "3. Pop" << endl;
         cout << "4. Peek" << endl;
+        cout << "5. Stack top" << endl;
         cout << "-1. Exit" << endl;
         int choice;
         cin >> choice;
@@ -47,6 +48,13 @@ int main()
             int peeked = driver->peek(n);
             if (peeked != -1)
                 cout << "Element at " << n << " = " << peeked << endl;
+            break;
+        }
+        case 5:
+        {
+            int top = driver->stackTop();
+            if (top != -1)
+                cout << "Stack top : " << top << endl;
             break;
         }
         case -1:

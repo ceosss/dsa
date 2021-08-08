@@ -7,6 +7,7 @@ public:
     int data;
     Stack *next;
     void push(int);
+    void display();
 } * head;
 
 void Stack::push(int n)
@@ -23,4 +24,20 @@ void Stack::push(int n)
         newElement->next = head;
         head = newElement;
     }
+}
+
+void Stack::display()
+{
+    if (!head)
+    {
+        cout << "Stack underflow" << endl;
+        return;
+    }
+    Stack *itr = head;
+    while (itr)
+    {
+        cout << " <- [" << itr->data << "]";
+        itr = itr->next;
+    }
+    cout << endl;
 }

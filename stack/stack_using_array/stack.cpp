@@ -13,6 +13,7 @@ int main()
         cout << "1. Insert" << endl;
         cout << "2. Display" << endl;
         cout << "3. Pop" << endl;
+        cout << "4. Peek" << endl;
         cout << "-1. Exit" << endl;
         int choice;
         cin >> choice;
@@ -36,6 +37,16 @@ int main()
             int popped = driver->pop();
             if (popped != -1)
                 cout << popped << " popped" << endl;
+            break;
+        }
+        case 4:
+        {
+            cout << "n <- ";
+            int n;
+            cin >> n;
+            int peeked = driver->peek(n);
+            if (peeked != -1)
+                cout << "Element at " << n << " = " << peeked << endl;
             break;
         }
         case -1:

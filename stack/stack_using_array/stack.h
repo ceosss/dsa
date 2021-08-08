@@ -14,6 +14,7 @@ public:
     void insert(int);
     void display();
     int pop();
+    int peek(int);
 };
 
 void Stack::insert(int n)
@@ -54,5 +55,19 @@ int Stack::pop()
     {
         int popped = a[top--];
         return popped;
+    }
+}
+
+int Stack::peek(int n)
+{
+    if (n < 0 || n > top)
+    {
+        cout << "Invalid index" << endl;
+        return -1;
+    }
+    else
+    {
+        //1 2 3 4 5 , n=4
+        return a[top - n];
     }
 }

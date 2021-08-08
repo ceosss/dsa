@@ -8,6 +8,7 @@ public:
     Stack *next;
     void push(int);
     void display();
+    int pop();
 } * head;
 
 void Stack::push(int n)
@@ -40,4 +41,17 @@ void Stack::display()
         itr = itr->next;
     }
     cout << endl;
+}
+int Stack::pop()
+{
+    if (!head)
+    {
+        cout << "Stack underflow" << endl;
+        return -1;
+    }
+    Stack *toPop = head;
+    head = head->next;
+    int data = toPop->data;
+    delete toPop;
+    return data;
 }

@@ -9,6 +9,7 @@ public:
     void push(int);
     void display();
     int pop();
+    bool empty();
 } * head;
 
 void Stack::push(int n)
@@ -54,4 +55,8 @@ int Stack::pop()
     int data = toPop->data;
     delete toPop;
     return data;
+}
+bool Stack::empty()
+{
+    return head == NULL;
 }

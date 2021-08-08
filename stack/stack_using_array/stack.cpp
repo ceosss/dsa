@@ -12,6 +12,7 @@ int main()
     {
         cout << "1. Insert" << endl;
         cout << "2. Display" << endl;
+        cout << "3. Pop" << endl;
         cout << "-1. Exit" << endl;
         int choice;
         cin >> choice;
@@ -28,6 +29,13 @@ int main()
         case 2:
         {
             driver->display();
+            break;
+        }
+        case 3:
+        {
+            int popped = driver->pop();
+            if (popped != -1)
+                cout << popped << " popped" << endl;
             break;
         }
         case -1:

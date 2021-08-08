@@ -16,6 +16,7 @@ public:
     int pop();
     int peek(int);
     int stackTop();
+    bool empty();
 };
 
 void Stack::insert(int n)
@@ -84,4 +85,9 @@ int Stack::stackTop()
     {
         return a[top];
     }
+}
+
+bool Stack::empty()
+{
+    return top == -1 ? true : false;
 }

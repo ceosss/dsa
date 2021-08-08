@@ -10,6 +10,7 @@ public:
     void display();
     int pop();
     bool empty();
+    int stackTop();
 } * head;
 
 void Stack::push(int n)
@@ -59,4 +60,16 @@ int Stack::pop()
 bool Stack::empty()
 {
     return head == NULL;
+}
+int Stack::stackTop()
+{
+    if (!head)
+    {
+        cout << "Stack underflow" << endl;
+        return -1;
+    }
+    else
+    {
+        return head->data;
+    }
 }

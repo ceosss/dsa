@@ -14,6 +14,7 @@ int main()
         cout << "2. Display" << endl;
         cout << "3. Pop" << endl;
         cout << "4. Is Empty" << endl;
+        cout << "5. Stack Top" << endl;
         cout << "-1.Exit" << endl;
         int choice;
         cin >> choice;
@@ -46,6 +47,13 @@ int main()
                 cout << "Empty" << endl;
             else
                 cout << "Not empty" << endl;
+            break;
+        }
+        case 5:
+        {
+            int top = driver->stackTop();
+            if (top != -1)
+                cout << "Top: " << top << endl;
             break;
         }
         case -1:

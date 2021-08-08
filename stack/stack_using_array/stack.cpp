@@ -11,6 +11,7 @@ int main()
     while (1)
     {
         cout << "1. Insert" << endl;
+        cout << "2. Display" << endl;
         cout << "-1. Exit" << endl;
         int choice;
         cin >> choice;
@@ -22,6 +23,11 @@ int main()
             int x;
             cin >> x;
             driver->insert(x);
+            break;
+        }
+        case 2:
+        {
+            driver->display();
             break;
         }
         case -1:

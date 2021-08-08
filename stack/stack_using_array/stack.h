@@ -12,6 +12,7 @@ public:
         top = -1;
     }
     void insert(int);
+    void display();
 };
 
 void Stack::insert(int n)
@@ -24,5 +25,19 @@ void Stack::insert(int n)
     else
     {
         a[++top] = n;
+    }
+}
+void Stack::display()
+{
+    if (top == -1)
+    {
+        cout << "Empty Stack" << endl;
+        return;
+    }
+    else
+    {
+        for (int i = top; i >= 0; i--)
+            cout << " <- [" << a[i] << "]";
+        cout << endl;
     }
 }

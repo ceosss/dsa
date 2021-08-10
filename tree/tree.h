@@ -9,6 +9,7 @@ public:
     Tree *right;
     void create();
     void inorder(Tree *);
+    void preorder(Tree *);
 } * root;
 
 Tree *newTreeNode(int n)
@@ -60,5 +61,14 @@ void Tree::inorder(Tree *itr)
         inorder(itr->left);
         cout << itr->data << " ";
         inorder(itr->right);
+    }
+}
+void Tree::preorder(Tree *itr)
+{
+    if (itr)
+    {
+        cout << itr->data << " ";
+        preorder(itr->left);
+        preorder(itr->right);
     }
 }

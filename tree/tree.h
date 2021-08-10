@@ -10,6 +10,7 @@ public:
     void create();
     void inorder(Tree *);
     void preorder(Tree *);
+    void postorder(Tree *);
 } * root;
 
 Tree *newTreeNode(int n)
@@ -70,5 +71,15 @@ void Tree::preorder(Tree *itr)
         cout << itr->data << " ";
         preorder(itr->left);
         preorder(itr->right);
+    }
+}
+
+void Tree::postorder(Tree *itr)
+{
+    if (itr)
+    {
+        postorder(itr->left);
+        postorder(itr->right);
+        cout << itr->data << " ";
     }
 }

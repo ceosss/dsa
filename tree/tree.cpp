@@ -13,6 +13,7 @@ int main()
         cout << "1. Create a tree" << endl;
         cout << "2. Inorder traversal" << endl;
         cout << "3. Preorder traversal" << endl;
+        cout << "4. Postorder traversal" << endl;
         cout << "-1. Exit" << endl;
         int choice;
         cin >> choice;
@@ -32,6 +33,12 @@ int main()
         case 3:
         {
             driver->preorder(root);
+            cout << endl;
+            break;
+        }
+        case 4:
+        {
+            driver->postorder(root);
             cout << endl;
             break;
         }

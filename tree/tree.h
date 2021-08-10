@@ -8,6 +8,7 @@ public:
     int data;
     Tree *right;
     void create();
+    void inorder(Tree *);
 } * root;
 
 Tree *newTreeNode(int n)
@@ -49,5 +50,15 @@ void Tree::create()
             q.push(newnode);
             t->right = newnode;
         }
+    }
+}
+
+void Tree::inorder(Tree *itr)
+{
+    if (itr)
+    {
+        inorder(itr->left);
+        cout << itr->data << " ";
+        inorder(itr->right);
     }
 }

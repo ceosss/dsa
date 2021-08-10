@@ -11,6 +11,7 @@ int main()
     while (1)
     {
         cout << "1. Create a tree" << endl;
+        cout << "2. Inorder traversal" << endl;
         cout << "-1. Exit" << endl;
         int choice;
         cin >> choice;
@@ -20,6 +21,11 @@ int main()
         {
             driver->create();
             break;
+        }
+        case 2:
+        {
+            driver->inorder(root);
+            cout << endl;
         }
         case -1:
         {
